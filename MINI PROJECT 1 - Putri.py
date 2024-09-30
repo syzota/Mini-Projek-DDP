@@ -1,8 +1,10 @@
+# Data user
 data = {
     "Putri": "015",
     "Putra": "016"
 }
 
+# Program sederhana login (Nama dan NIM)
 def login():
     while True:
         nama = input("Masukkan nama: ")
@@ -16,6 +18,7 @@ def login():
 
 login()
 
+# Perhitungan gaji dengan memasukkan tarif gaji beserta total jam kerja
 while True:
     jam_kerja = float(input("Masukkan total jam kerja selama sebulan: "))
     tarif_kerja = float(input("Masukkan tarif kerja per jam: "))
@@ -30,11 +33,12 @@ while True:
 
     print("Nominal gaji Anda:", total_gaji)
 
+    # Membuat looping jika ingin menghitung gaji kembali
     ulang = input("Apakah Anda ingin menghitung gaji kembali? (y/n): ")
 
-    if ulang == 'y':
+    if ulang == 'n':
+        print("Terima kasih.")
+        break
+    else:
         print("Silahkan masukkan data kembali.")
         login()
-    else:
-        print("Terima kasih.")
-    break
